@@ -1,0 +1,108 @@
+<section>
+  <div class="home">
+    <div class="hero__background">
+      <!-- <div class="black-overlay"></div> -->
+      <!-- <video class="video hidden-xs hidden-sm" controls autoplay loop>
+        <source src="img/demo.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      </video> -->
+      <div class="hidden-lg hidden-md">
+        <img src="img/home.jpg" alt="Home Image">
+      </div>
+    </div>
+    <div class="home-contain">
+      <div class="need-help wow fadeIn">
+        <button class="btn btn-blue font-bold" ng-click="open4('sm')" ng-controller="headerctrl">Not able to find an expert?</button>
+      </div>
+      <div class="search-pos">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 text-center">
+              <div class="search-head text-center wow fadeInUp">
+                <h2 class="color-white font-raleway">Get experts to answer all your questions</h2>
+              </div>
+              <div class="search-input wow fadeInUp">
+                <form name="user" class="pos-relative">
+                  <div class="search-icon display-inline">
+                    <img src="img/search-mini.png" alt="">
+                  </div>
+                  <div>
+                    <div class="search-br searching">
+                      <input type="text" name="name" value="search"  class="form-control" placeholder="Search category, expertname, skill.." ng-model="expertdata.search">
+                    </div>
+
+                    <div class="search-btn searching-btn display-inline"><a ui-sref="search({search:expertdata.search})">
+                      <button class="btn btn-animate-org" ng-disabled="expertdata.search.length==null || expertdata.search.length==0">SEARCH</button></a>
+                    </div>
+
+                  </div>
+
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="signup text-center">
+      <h2 class="color-white font-raleway">
+  SIGN UP AND GET YOUR SECOND CALL FREE
+</h2>
+    </div> -->
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="how-it-work text-center">
+        <h3 class="font-bold font-raleway m70 color-base">HOW IT WORKS</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12 text-center" ng-repeat="data in hows track by $index">
+        <div class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.5s">
+          <div class="icon-box">
+            <img ng-src="{{data.icon}}" alt="" class="img-responsive margin-auto ">
+          </div>
+          <div class="icon-title">
+            <span class="font-raleway color-base text-cap" style="font-weight: 500;">{{data.title}}</span>
+          </div>
+          <div class="desc mt7">
+            <p class="font-light color-grey">{{data.desc}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="about p70 mt60">
+    <div class="container">
+      <div class=" wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+        <div class="row">
+          <h3 class="font-bold font-raleway text-center color-base margin0">ABOUT JACKNOWS</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="owl">
+              <img src="img/owl.png" alt="" class="img-responsive margin-auto">
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-xs-12">
+            <div class="abt-desc mt20 mb20">
+              <p >
+            If you're looking for a solution to anything under the sun, trust Jack - He knows.
+              </p>
+              <p>
+We're an exciting start-up in the peer-to-peer professional service domain, looking to connect people with subject matter experts for customised requests and queries. The platform will house experts across industries, who will assist our users by dishing out pro advice at a nominal fee! No more unnecessary office trips - it's all from the comfort of your living room. Whatever your request, we've got you covered.  </p>
+            </div>
+            <div class="read-mr pull-right mt20">
+              <button class="btn btn-animate-inverse-org text-up f13" ui-sref="about">read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,416 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/flexslider/flexslider.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
+/* Bootstrap Variables Goes Here */
+$brand-primary: #ff8621 !default;
+$brand-success-light: #0093b0 !default;
+$brand-success: #588ed0 !default;
+$brand-warning: #ffec39 !default;
+$brand-danger: #fc483f !default;
+$brand-info: #000072 !default;
+$brand-base: #474d4f !default;
+$grey-base: #969696 !default;
+$facebook: #3b5998 !default;
+$google: #dc4a38 !default;
+$white: #fff !default;
+$transparent: rgba(255, 255, 255, 0) !default;
+$bold: 600 !default;
+$light: 300 !default;
+$font-family-sans-serif: "Lato","Raleway", sans-serif !default;
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+body {
+  padding-top: 70px;
+}
+img.loading {
+  text-align: center;
+  opacity: 1;
+  width: 32px !important;
+  height: auto;
+}
+img {
+  opacity: 0;
+  @include transition(all 300ms ease);
+}
+img.doneLoading {
+  opacity: 1;
+}
+nav li:hover .dropdown-menu {
+  display: block;
+}
+a, .btn {
+  cursor: pointer;
+  @include transition(all ease 300ms);
+}
+//button
+.btn-animate-become {
+  border-color: #fff;
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  z-index: 1;
+  @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  &:hover {
+    border-color: $brand-primary !important;
+    &:after {
+      width: 100%;
+      right: 0;
+      left: auto;
+      background-color: $brand-primary;
+    }
+  }
+  &:after {
+    content: "";
+    @include size(0,100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  }
+}
+.btn-animate-org {
+  position: relative;
+  background-color: $brand-primary;
+  color: #fff;
+  z-index: 1;
+  @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  &:hover {
+    color: $brand-primary;
+    &:after {
+      width: 100%;
+      right: 0%;
+      left: auto;
+      background-color: #fff;
+      color: $brand-primary;
+    }
+  }
+  &:after {
+    content: "";
+    @include size(0,100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  }
+}
+.btn-animate-success {
+  position: relative;
+  background-color: $brand-success;
+  color: #fff;
+  z-index: 1;
+  @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  &:hover {
+    color: $brand-success;
+    &:after {
+      width: 100%;
+      right: 0%;
+      left: auto;
+      background-color: #fff;
+      color: $brand-success;
+    }
+  }
+  &:after {
+    content: "";
+    @include size(0,100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  }
+}
+.btn-animate-inverse-success {
+  position: relative;
+  border-color: $brand-success;
+  background-color: transparent;
+  color: $brand-success;
+  z-index: 1;
+  @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  &:hover {
+    color: #fff;
+    &:after {
+      width: 100%;
+      right: 0%;
+      left: auto;
+      background-color: $brand-success;
+    }
+  }
+  &:after {
+    content: "";
+    @include size(0,100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  }
+}
+.btn-animate-inverse-org {
+  position: relative;
+  border-color: $brand-primary;
+  background-color: transparent;
+  color: $brand-primary;
+  z-index: 1;
+  @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  &:hover {
+    color: #fff;
+    &:after {
+      width: 100%;
+      right: 0%;
+      left: auto;
+      background-color: $brand-primary;
+    }
+  }
+  &:after {
+    content: "";
+    @include size(0,100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include transition(all 500ms cubic-bezier(0.42, 0, 0.58, 1));
+  }
+}
+//bootstrap forms
+.input-lg,
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.btn,
+.form-control {
+  border-radius: 0;
+  @include box-shadow(none);
+}
+.form-control:focus {
+  border-color: $brand-primary;
+  outline: 0;
+  @include box-shadow(none);
+}
+.fancybox-image {
+    opacity: 1!important;
+}
+.fancybox-image {
+    opacity: 1!important;
+}
+.fancybox-nav {
+    top: 50%;
+    @include transform(translateY(-50%));
+    height: 40%;
+  }
+//bootstrap forms
+/* Start writing sass here */
+@import "fancybox-override";
+.home {
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+//header
+.navbar-brand {
+
+    padding: 19px 15px;
+}
+.logo {
+  @include margin(12px 0px 0px 18px);
+}
+//home starts here
+.home {
+  &:hover {
+    color: $brand-base;
+  }
+  &:active {
+    color: $brand-base;
+  }
+  &:focus {
+    color: $brand-base;
+  }
+}
+.hero__background {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url('../img/home.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.black-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.38);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.video {
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 100%;
+}
+.home-contain {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  height: 100%;
+  z-index: 9;
+}
+.need-help {
+  position: absolute;
+  transform: rotate(-90deg);
+  right: -87px;
+  top: 30%;
+  button {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+}
+.search-pos {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+.search-input {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+}
+.search-br {
+  width: 83%;
+  float: left;
+  input {
+    padding: 6px 10px 6px 50px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+.form-control {
+  border-radius: 0;
+  &:focus {
+    outline: 0;
+
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075), 0 0 0 rgba(102, 175, 233, 0.6);
+  }
+  &:active {
+    outline: 0;
+  }
+}
+.pos-relative {
+  position: relative;
+}
+input {
+  @include placeholder {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+.search-btn {
+  button {
+    font-size: 15px;
+    padding: 9px 25px;
+  }
+}
+.btn-blue {
+  @include button-variant($white, $brand-success, $brand-success);
+}
+.about {
+  background-color: #cecece;
+}
+.p70 {
+  padding: 70px 0;
+}
+.mt60 {
+  margin-top: 60px;
+}
+.mt7 {
+  margin-top: 7px;
+}
+.m20 {
+  margin: 20px 0;
+}
+.margin-auto{
+  margin: 0 auto;
+}
+.col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7,.col-xs-12{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.icon-box img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.icon-box {
+    height: 90px;
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.icon-title {
+    display: inline-block;
+    padding-left: 12px;
+}
+
+//footer
+.footer {
+  border-top: 1px solid #c8c8c8;
+  padding-top: 20px;
+padding-bottom: 20px;
+}
+.sub-footer {
+  background-color: #292624;
+  color: #fff;
+  padding: 15px 0;
+}
+.bk-grey {
+  background-color: #cecece;
+}
+.social-set {
+  ul {
+    list-style: none;
+    display: block;
+    margin-top: 10px;
+    li {
+      display: inline-block;
+      padding: 0 4px;
+      a {
+        i {
+          @include square(30px);
+          color: #959595;
+          padding: 5px 6px;
+          border: 1px solid #959595;
+          border-radius: 100%;
+          font-size: 19px;
+          @include transition(all 300ms linear);
+          &:hover {
+            color: #fff;
+            background-color: #959595;
+            @include transition(all 300ms linear);
+          }
+        }
+      }
+    }
+  }
+}
