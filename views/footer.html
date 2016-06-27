@@ -1,15 +1,15 @@
-<footer class="mt60 footer">
+<footer class="mt60 border footer">
 
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-3 col-xs-6">
         <div class="footer-menu" ng-controller="headerctrl">
           <ul>
-            <li ng-if="!userLogedin && !expertLogedin" >
+            <!-- <li ng-if="!userLogedin && !expertLogedin" >
               <a ui-sref="login">
                   Login/Signup
                 </a>
-            </li>
+            </li> -->
             <li>
               <a href="" ui-sref="home">
                   Home
@@ -20,7 +20,7 @@
                   Booking
                 </a>
             </li> -->
-            <li ng-if="userLogedin || expertLogedin">
+            <!-- <li ng-if="userLogedin || expertLogedin">
               <a ng-show="userLogedin" ui-sref="user-booking">
                   Booking
                 </a>
@@ -35,7 +35,7 @@
               <a ng-show="expertLogedin" ui-sref="expert-profile({id:userdata._id})">
                 Profile
                 </a>
-            </li>
+            </li> -->
             <!-- <li>
               <a href="">
                   Profile
@@ -58,20 +58,20 @@
         <div class="footer-menu">
           <ul class="padd1">
             <li>
-              <a ui-sref="about">
+              <a ui-sref="abouts">
                   About Us
                 </a>
             </li>
-            <li>
+            <!-- <li>
               <a ui-sref="contact">
                   Contact Us
                 </a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
               <a ui-sref="faq">
                   Help
                 </a>
-            </li>
+            </li> -->
             <li>
               <a ui-sref="terms-condition">
                 Terms & Condition
@@ -95,14 +95,11 @@
           <p class="font-light color-base" ng-if="newsletter.comment=='Mail Sent'">Thank You For Submitting</p>
             <p class="font-light color-base" ng-if="newsletter.message=='User Already Exist'">Sorry User already exist</p>
             <p class="font-light color-base" ng-if="newsletter.comment=='incorrectEmail'">Please Enter Valid Email Address</p>
-          <!-- <p class="font-light color-base" ng-if="newsletter.value==false">{{newsletter.error}}</p> -->
         <div class="display-inline">
-          <!-- <form> -->
             <div class="form-group pull-left">
               <input type="email" class="form-control bk-grey" ng-model="newsletter.email">
             </div>
             <button type="submit" class="btn btn-animate-org submit" ng-click="newsletterSubmit(newsletter.email)">SUBMIT</button>
-
         </div>
         </form>
           <div class="social">

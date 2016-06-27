@@ -21,14 +21,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
                 'id': 'home',
             }
         })
-        .state('abouts', {
-            url: "/abouts",
-            templateUrl: "views/template.html",
-            controller: 'HomeCtrl',
-            params: {
-                'id': 'abouts',
-            }
-        })
+        ;
 
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);

@@ -1,0 +1,24 @@
+<section class="works">
+    <div class="container">
+        <div class="row">
+            <div class="how-it-work text-center">
+                <h3 class="font-bold font-raleway m70 color-base">HOW IT WORKS</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 text-center" ng-repeat="data in hows track by $index">
+                <div class="wow fadeInUp padding" data-wow-delay="0.2s" data-wow-duration="1.5s">
+                    <div class="icon-box">
+                        <img ng-src="{{data.icon}}" alt="" class="img-responsive margin-auto ">
+                    </div>
+                    <div class="icon-title">
+                        <span class="font-raleway color-base text-cap" style="font-weight: 500;">{{data.title}}</span>
+                    </div>
+                    <div class="desc mt7">
+                        <p class="font-light color-grey text-justify">{{data.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

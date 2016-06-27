@@ -1,30 +1,54 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-5">
-      <div class="navbar-header pull-left">
-        <a class="navbar-brand display-inline">
-          <!-- <img src="img/options.png" alt="menu" width="30">  -->
-          <button type="button" class="hamburger" ng-click="getMenu();">
-            <span class=""></span>
-            <span class=""></span>
-            <span class=""></span>
-          </button>
-        </a>
-        <div class="logo display-inline ">
-          <a ui-sref="home" class="display-inline">
-            <img ng-src="img/Swaap-Logo-Final.png" alt="" class="img-responsive home-logo " width="180" alt="Home" title="Home"> </a>
-          </div>
+<header class="pos-relative home-page {{expertlogo}} {{userlogo}} {{home}} {{experthome}}" ng-controller="headerctrl">
+    <nav class="navbar navbar-default navbar-fixed-top header-white-black wow fadeInDown" data-wow-delay="0.5s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-5 col-xs-12">
+                    <div class="navbar-header pull-left">
+                        <a class="navbar-brand display-inline">
+                            <!-- <img src="img/options.png" alt="menu" width="30">  -->
+                            <button type="button" class="hamburger" ng-click="getMenu();">
+                                <span class=""></span>
+                                <span class=""></span>
+                                <span class=""></span>
+                            </button>
+                        </a>
+                        <div class="logo display-inline ">
+                            <a ui-sref="home" class="display-inline">
+                                <img ng-src="img/logo.png" class="img-responsive home-logo " width="180" alt="Home" title="Swaap"> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-7 col-xs-12">
+                    <div class="righ-side pull-right custom-li mt10">
+                        <ul class="list-inline">
+                            <li>
+                                <a class="btn-animate-become b btn font-bold btn-1 member btn-1b" href="http://swaap.in/login">Member login</a>
+                            </li>
+                            <li>
+                                <button class="btn-animate-become b btn font-bold btn-1 btn-1b" ng-click="open();">Become a member</button>
+                            </li>
+                            <!-- <li class="profile pointer">
+                                <a class="display-inline user-icon img-rounded" href=""><img class="color-white white-img" src="img/log.png" alt="login" width="30" ng-click="goToLogin()" tooltip-placement="{{placement.selected}}" uib-tooltip="{{placement.selected}}" ng-show="!userLogedin" /></a>
+                            </li>
+                            <li>
+                                <a class="display-inline" href="#"><img class="white-img" src="img/help.png" alt="" width="30" ui-sref="faq" tooltip-placement="{{placement.selected}}" uib-tooltip="HELP {{placement.selected}}"></a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="side-menu menu-out">
+                <span ng-click="closeMenu();" class="closemenu {{menu}}"><i class="ln-cross"></i></span>
+                <span class="pull-right close-icon"><i class="fa fa-times-circle-o" ng-click="closeMenu();"></i></span>
+                <span class="heading-menu">Menu</span>
+                <div class="template menu" ng-include="template.menu"></div>
+
+                <div class="mt30">
+                      <a class="btn-animate-become b btn font-bold btn-1 clicks member btn-1b" href="http://swaap.in/login">Member login</a>
+                          <button class="btn-animate-become b btn font-bold btn-1 btn-1b" ng-click="open();">Become a member</button>
+                    <!-- <button class="btn btn-become text-uppercase become-expert" ng-if="userLogedin" >become an expert</button> -->
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-8 col-sm-7">
-        <div class="righ-side pull-right custom-li mt10">
-          <ul class="list-inline">
-            <li><a href="">become member</a></li>
-            <li><a href="">member login</a></li>
-            <li><a href=""><img src="img/log.png" alt=""></a></li>
-            <li><a href="#"><img src="img/help.png" alt=""></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    </nav>
+</header>
