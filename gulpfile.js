@@ -26,9 +26,9 @@ var jsArray = [
 var replacehostFrom = "http://localhost/demo/";
 var replacehostTo = "http://wohlig.co.in/demo2/";
 
-var ftpString = "U2FsdGVkX1+jcFED/CJbcYNiOJ42eBsjlxqmrcKWSIPH9Sao/4535zPQX5Fa7VYGAHSfkKCXbDpiUfJhkRRijaerS1lJ/k+dSfqsfl45ICkzMTJ7fBNVDj/242ur9ZG4HZDhSe1O/J4vEUboWDRBhg==";
+var ftpString = "U2FsdGVkX18HUwbnl4E8dV3Ad9uoJwRiXQeBIjWOvaM6NfUBhfqPwhjw2qnk5txnNr+QI0TE+yMy7iWioQsBg9iXAqSgCOx8bqsKUoQKh9FTJuK9GmEgzmCFT4Fw4Hsv";
 
-var uploadingFolder = "swaap";
+var uploadingFolder = "";
 var password = "";
 
 
