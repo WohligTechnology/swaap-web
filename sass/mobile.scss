@@ -1,0 +1,54 @@
+@media (max-width: 767px){
+.tcenter{
+  text-align: center;
+}
+.padd1 {
+    float: right;
+    padding-right: 30px;
+}
+.arrows{
+  img{
+    width: 30%;
+  }
+}
+
+}
+
+@media (max-width: 480px){
+  .tcenter{
+    text-align: center;
+  }
+  .header-white-black {
+      padding:0;
+    }
+.arrows{
+  img{
+    width: 30%;
+  }
+}
+.f-size {
+    font-size: 7px;
+}
+.mobile-download {
+    padding: 20px 0;
+}
+
+.righ-side,.navbar-header{
+  float: none!important;
+  text-align: center;
+  ul li {
+    display: none;
+  }
+}
+
+.margin-all{
+  padding-top: 50px;
+}
+
+.about{
+  p{
+    margin-bottom: 20px;
+  }
+}
+
+}
