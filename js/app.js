@@ -13,12 +13,20 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
-        .state('home', {
+    .state('home', {
+        url: "/",
+        templateUrl: "views/template.html",
+        controller: 'HomeCtrl',
+        params: {
+            'id': 'home',
+        }
+    })
+    .state('abouts', {
             url: "/",
             templateUrl: "views/template.html",
             controller: 'HomeCtrl',
             params: {
-                'id': 'home',
+                'id': 'abouts',
             }
         })
         ;
