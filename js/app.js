@@ -29,6 +29,14 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
                 'id': 'abouts',
             }
         })
+    .state('contactus', {
+            url: "/",
+            templateUrl: "views/template.html",
+            controller: 'HomeCtrl',
+            params: {
+                'id': 'contactus',
+            }
+        })
         ;
 
     $urlRouterProvider.otherwise("/");

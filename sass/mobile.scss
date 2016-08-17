@@ -15,6 +15,11 @@
 }
 
 @media (max-width: 480px){
+  .info{
+    p{
+      text-align: justify;
+    }
+  }
   .tcenter{
     text-align: center;
   }

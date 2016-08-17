@@ -16,6 +16,11 @@ var navigationservice = angular.module('navigationservice', [])
         name: "About",
         classis: "active",
         pagename: "abouts"
+    },
+    {
+        name: "Contact",
+        classis: "active",
+        pagename: "contactus"
     }];
 
     return {

@@ -18,7 +18,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         one: "views/section/section1.html",
         two: "views/section/section2.html",
         three: "views/section/section3.html",
-        four: "views/section/section4.html"
+        four: "views/section/section4.html",
+        five: "views/section/section5.html"
     };
 
     $scope.$on('$viewContentLoaded', function() {
