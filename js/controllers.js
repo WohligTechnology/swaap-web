@@ -64,15 +64,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.hows = [{
         icon: 'img/i1.png',
         title: 'Barter',
-        desc: 'Barter is perhaps the words oldest system of trade. We all have heard and studied in school about how people used to barter for sustenance before the advent of money, the currency. Swaap advocates the age old Barter system to be used by corporate /individual business for mutual win-win deals.'
+        desc: 'Barter is perhaps the worlds oldest system of trade. We all have heard and studied in school about how people used to barter for sustenance before the advent of money, the currency. Swaap advocates the age old Barter system to be used by corporate /individual business for mutual win-win deals.'
     }, {
         icon: 'img/i2.png',
         title: 'Who We Are',
-        desc: 'Swaap has built its impeccable reputation on solid financials, ethical and vigilant trading practices and creating barter system that’s designed to help its members thrive. It’s vast and growing network of active members sets swaap apart in an important way.'
+        desc: 'Swaap has built its impeccable reputation on solid financials, ethical and vigilant trading practices and creating barter system that’s designed to help its vendors thrive. It’s vast and growing network of active vendors sets swaap apart in an important way.'
     }, {
         icon: 'img/i4.png',
         title: 'Power Of Barter',
-        desc: ' A true focus on service, rock solid financial stability and a reputation for integrity and Transparency in all its dealings. Swaap members comprise all facets of industry, Print &amp; etc. Smart businesses are growing more productive, efficient and successful with the power of barter.'
+        desc: ' A true focus on service, rock solid financial stability and a reputation for integrity and Transparency in all its dealings. Swaap vendors comprise all facets of industry, print etc. Smart businesses are growing more productive, efficient and successful with the power of barter.'
     }, {
         icon: 'img/i3.png',
         title: 'Buisness stratergy',

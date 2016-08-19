@@ -354,7 +354,7 @@ a, .btn {
     border-color: #fff!important;
 }
 .righ-side{
-  margin-top: 25px;
+  margin-top: 23px;
 }
 
 .navbar-brand {
@@ -716,6 +716,12 @@ header .navbar-default .navbar-nav>.active>a, header .navbar-default .navbar-nav
   padding: 15px 0 0;
 }
 
+.list-inline{
+  .member{
+  padding: 5px 29px;
+  padding-bottom: 7px;
+  }
+}
 // .btn:focus  {
 //   outline: 0;
 //    color: #333;
@@ -740,6 +746,10 @@ header .navbar-default .navbar-nav>.active>a, header .navbar-default .navbar-nav
   p{
     color: #969696;
   }
+}
+.btn-fit{
+  padding: 5px 29px;
+  padding-bottom: 7px;
 }
 //  .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus{
 //    outline: 0;
